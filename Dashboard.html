@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Sistemas Operativos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+  <div class="dashboard-wrap">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">📈</div>
+        <div class="title">Dashboard</div>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>Sistemas Operativos</h4>
+        <p class="muted">Selecciona 1 a 3</p>
+        <div class="filters">
+          <label class="frow"><input type="checkbox" id="chkWindows" checked> Windows</label>
+          <label class="frow"><input type="checkbox" id="chkLinux"> Linux</label>
+          <label class="frow"><input type="checkbox" id="chkMac"> macOS</label>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>Años</h4>
+        <p class="muted">2001 — 2024</p>
+      </div>
+
+      <div class="sidebar-footer">
+        <small>Desarrollado por <strong>Billy Salmerón</strong></small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>Evolución de Sistemas Operativos</h1>
+          <p class="muted">Porcentaje de usuarios desde 2001 hasta 2024</p>
+        </div>
+        <div class="right-controls">
+          <div class="chip">Última actualización: <strong>Hoy</strong></div>
+        </div>
+      </header>
+
+      <section class="charts">
+        <div class="card chart-container">
+          <div class="chart-switch">
+            <label><input type="radio" name="chartType" value="area" checked> Ver líneas</label>
+            <label><input type="radio" name="chartType" value="bar"> Ver barras</label>
+          </div>
+          <div id="chart"></div>
+        </div>
+
+        <div class="side-widgets">
+          <div class="card stats">
+            <div class="stat-row"><div class="stat-title">Windows</div><div class="stat-value" id="valWindows"></div></div>
+            <div class="stat-row"><div class="stat-title">Linux</div><div class="stat-value" id="valLinux"></div></div>
+            <div class="stat-row"><div class="stat-title">macOS</div><div class="stat-value" id="valMac"></div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
